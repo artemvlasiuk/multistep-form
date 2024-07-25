@@ -1,0 +1,74 @@
+@import "../../mixins.scss";
+
+.steps {
+  display: flex;
+  gap: 16px;
+  background-image: url("../../../public/assets/images/bg-sidebar-mobile.svg");
+  height: 172px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  justify-content: center;
+  padding-top: 32px;
+
+  margin-inline: calc(50% - 50vw);
+
+  @include on-desktop {
+    margin: 0;
+    flex-direction: column;
+    gap: 32px;
+    background-image: url("../../../public/assets/images/bg-sidebar-desktop.svg");
+    height: 568px;
+    width: 274px;
+    padding: 40px 32px;
+    border-radius: 10px;
+    justify-content: flex-start;
+  }
+
+  &__item {
+    @include on-desktop {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+    }
+    &-number {
+      width: 33px;
+      height: 33px;
+      border: 1px solid #fff;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 14px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      flex-shrink: 0;
+
+      &--active {
+        background-color: #bee2fd;
+        color: #022959;
+      }
+    }
+
+    &-text {
+      display: none;
+
+      @include on-desktop {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        color: #abbcff;
+        font-size: 12px;
+        font-weight: 400;
+
+        span {
+          color: #fff;
+          font-size: 14px;
+          font-weight: 700;
+          letter-spacing: 1px;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}

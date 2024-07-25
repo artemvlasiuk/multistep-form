@@ -1,0 +1,45 @@
+@import "../../mixins.scss";
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100vw;
+  height: 72px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  margin-inline: calc(50% - 50vw);
+
+  @include on-desktop {
+    display: none;
+  }
+}
+
+.button {
+  width: 97px;
+  height: 40px;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: 500;
+
+  &--primary {
+    background: #022959;
+    color: #fff;
+
+    &:hover {
+      background: #164a8a;
+    }
+  }
+
+  &--secondary {
+    background: none;
+    color: #9699aa;
+
+    &:hover {
+      color: #022959;
+      font-weight: 500;
+    }
+  }
+}
