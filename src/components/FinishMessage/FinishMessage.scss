@@ -1,6 +1,10 @@
 @import "../../mixins.scss";
 
 .finish {
+  @include on-desktop {
+    width: 450px;
+  }
+
   &__icon {
     margin: 0 auto;
     width: 56px;

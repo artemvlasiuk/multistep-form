@@ -1,6 +1,10 @@
 @import "../../mixins.scss";
 
 .add-ons {
+  @include on-desktop {
+    width: 450px;
+  }
+
   &__input {
     display: none;
   }
@@ -51,7 +55,7 @@
     cursor: pointer;
 
     &:hover {
-      border: 1px solid #483EFF;
+      border: 1px solid #483eff;
     }
   }
 
@@ -72,7 +76,7 @@
     align-items: center;
 
     &--checked {
-      background-color: #483EFF;
+      background-color: #483eff;
       border: none;
     }
   }

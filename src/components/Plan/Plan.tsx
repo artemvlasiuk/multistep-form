@@ -1,6 +1,5 @@
 import "./Plan.scss";
 import { useForm } from "../../context/FormContext";
-import { FormLayout } from "../FormLayout";
 import cn from "classnames";
 
 export const Plan = () => {
@@ -25,7 +24,7 @@ export const Plan = () => {
   };
 
   return (
-    <FormLayout>
+    <div className="plan">
       <h2 className="plan__title">Select your plan</h2>
       <p className="plan__description">
         You have the option of monthly or yearly billing.
@@ -134,6 +133,6 @@ export const Plan = () => {
           Yearly
         </p>
       </div>
-    </FormLayout>
+    </div>
   );
 };

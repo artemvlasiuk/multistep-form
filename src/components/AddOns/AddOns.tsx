@@ -1,6 +1,5 @@
 import cn from "classnames";
 import { useForm } from "../../context/FormContext";
-import { FormLayout } from "../FormLayout";
 import "./AddOns.scss";
 
 export const AddOns = () => {
@@ -22,7 +21,7 @@ export const AddOns = () => {
   };
 
   return (
-    <FormLayout>
+    <div className="add-ons">
       <h2 className="add-ons__title">Pick add-ons</h2>
       <p className="add-ons__description">
         Add-ons help enhance your gaming experience.
@@ -107,6 +106,6 @@ export const AddOns = () => {
           <p className="add-ons__price">{`+$${2 * multiply}/${period}`}</p>
         </div>
       </div>
-    </FormLayout>
+    </div>
   );
 };

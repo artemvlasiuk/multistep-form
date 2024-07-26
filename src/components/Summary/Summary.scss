@@ -1,6 +1,9 @@
 @import "../../mixins.scss";
 
 .summary {
+  @include on-desktop {
+    width: 450px;
+  }
   &__title {
     color: #022959;
     font-size: 24px;

@@ -1,4 +1,3 @@
-import { FormLayout } from "../FormLayout";
 import "./PersonalInfo.scss";
 import { useForm } from "../../context/FormContext";
 
@@ -27,7 +26,7 @@ export const PersonalInfo = () => {
   };
 
   return (
-    <FormLayout>
+    <div className="personal">
       <h2 className="personal__title">Personal info</h2>
       <p className="personal__description">
         Please provide your name, email address, and phone number.
@@ -68,11 +67,6 @@ export const PersonalInfo = () => {
           required
         />
       </label>
-
-      {/* <div className="form-buttons">
-        <button className="button button--secondary">Go Back</button>
-        <button className="button button--primary">Next Step</button>
-      </div> */}
-    </FormLayout>
+    </div>
   );
 };

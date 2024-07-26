@@ -3,29 +3,15 @@ import cn from "classnames";
 
 interface FooterProps {
   currentStep: number;
-  setCurrentStep: (step: number) => void;
+  handleNextStep: () => void;
+  handleBackStep: () => void;
 }
 
 export const Footer: React.FC<FooterProps> = ({
   currentStep,
-  setCurrentStep,
+  handleNextStep,
+  handleBackStep,
 }) => {
-  const handleNextStep = () => {
-    if (currentStep < 5) {
-      setCurrentStep(currentStep + 1);
-    } else {
-      return;
-    }
-  };
-
-  const handleBackStep = () => {
-    if (currentStep > 1) {
-      setCurrentStep(currentStep - 1);
-    } else {
-      return;
-    }
-  };
-
   return (
     <footer className="footer">
       <button

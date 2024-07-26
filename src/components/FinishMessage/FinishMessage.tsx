@@ -1,9 +1,8 @@
-import { FormLayout } from "../FormLayout";
 import "./FinishMessage.scss";
 
 export const FinishMessage = () => {
   return (
-    <FormLayout>
+    <div className="finish">
       <img
         src="/assets/images/icon-thank-you.svg"
         alt="Finish Icon"
@@ -15,6 +14,6 @@ export const FinishMessage = () => {
         platform. If you ever need support, please feel free to email us at
         support@loremgaming.com.
       </p>
-    </FormLayout>
+    </div>
   );
 };

@@ -1,7 +1,6 @@
 import { useForm } from "../../context/FormContext";
 import { getAddOns } from "../../helpers/getAddOns";
 import { getPlanPrice } from "../../helpers/getPlanPrice";
-import { FormLayout } from "../FormLayout";
 import "./Summary.scss";
 
 export const Summary = () => {
@@ -17,7 +16,7 @@ export const Summary = () => {
     addOnsList.reduce((acc, addOn) => (addOn ? acc + addOn.price : acc), 0);
 
   return (
-    <FormLayout>
+    <div className="summary">
       <h2 className="summary__title">Finishing up</h2>
       <p className="summary__description">
         Double-check everything looks OK before confirming.
@@ -51,6 +50,6 @@ export const Summary = () => {
         {`Total (per ${period === "mo" ? "month" : "year"})`}
         <span className="summary__total-price">{`$${totalPrice}/${period}`}</span>
       </div>
-    </FormLayout>
+    </div>
   );
 };
