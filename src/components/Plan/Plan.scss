@@ -101,6 +101,10 @@
       color: #9699aa;
       font-size: 14px;
       font-weight: 500;
+
+      &--active {
+        color: #022959;
+      }
     }
   }
 }

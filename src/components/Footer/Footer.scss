@@ -42,4 +42,16 @@
       font-weight: 500;
     }
   }
+
+  &--disabled {
+    visibility: hidden;
+  }
+
+  &--confirm {
+    background-color: #483EFF;
+
+    &:hover {
+      background-color: #928CFF;
+    }
+  }
 }

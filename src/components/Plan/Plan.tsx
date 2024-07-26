@@ -7,6 +7,7 @@ export const Plan = () => {
   const { formData, setFormData } = useForm();
   const { plan, billing } = formData;
   const multiplier = billing === "yearly" ? 10 : 1;
+  const period = billing === "yearly" ? "yr" : "mo";
 
   const handlePlanChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { name, value } = event.target;
@@ -38,13 +39,13 @@ export const Plan = () => {
           htmlFor="arcade"
         >
           <img
-            src="./assets/images/icon-arcade.svg"
+            src="/assets/images/icon-arcade.svg"
             alt="Arcade Icon"
             className="plan__select-icon"
           />
           <p className="plan__select-text">
             Arcade
-            <span>{`$${9 * multiplier}/${billing}`}</span>
+            <span>{`$${9 * multiplier}/${period}`}</span>
           </p>
         </label>
         <input
@@ -63,13 +64,13 @@ export const Plan = () => {
           htmlFor="advanced"
         >
           <img
-            src="./assets/images/icon-advanced.svg"
+            src="/assets/images/icon-advanced.svg"
             alt="Advanced Icon"
             className="plan__select-icon"
           />
           <p className="plan__select-text">
             Advanced
-            <span>{`$${12 * multiplier}/${billing}`}</span>
+            <span>{`$${12 * multiplier}/${period}`}</span>
           </p>
         </label>
         <input
@@ -88,13 +89,13 @@ export const Plan = () => {
           htmlFor="pro"
         >
           <img
-            src="./assets/images/icon-pro.svg"
+            src="/assets/images/icon-pro.svg"
             alt="Pro Icon"
             className="plan__select-icon"
           />
           <p className="plan__select-text">
             Pro
-            <span>{`$${15 * multiplier}/${billing}`}</span>
+            <span>{`$${15 * multiplier}/${period}`}</span>
           </p>
         </label>
         <input
@@ -109,7 +110,13 @@ export const Plan = () => {
       </div>
 
       <div className="plan__switcher">
-        <p className="plan__switcher-text">Monthly</p>
+        <p
+          className={cn("plan__switcher-text", {
+            "plan__switcher-text--active": billing === "monthly",
+          })}
+        >
+          Monthly
+        </p>
         <label className="switch">
           <input
             type="checkbox"
@@ -119,7 +126,13 @@ export const Plan = () => {
           />
           <span className="slider"></span>
         </label>
-        <p className="plan__switcher-text">Yearly</p>
+        <p
+          className={cn("plan__switcher-text", {
+            "plan__switcher-text--active": billing === "yearly",
+          })}
+        >
+          Yearly
+        </p>
       </div>
     </FormLayout>
   );
