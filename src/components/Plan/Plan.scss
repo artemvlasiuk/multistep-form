@@ -1,33 +1,16 @@
 @import "../../mixins.scss";
 
 .plan {
-
   &__input {
     display: none;
   }
 
   &__title {
-    color: #022959;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 9px;
-
-    @include on-desktop {
-      font-size: 32px;
-      margin-bottom: 11px;
-    }
+    @include form-title;
   }
 
   &__description {
-    color: #9699aa;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: 22px;
-
-    @include on-desktop {
-      margin-bottom: 35px;
-    }
+    @include form-description;
   }
 
   &__selector {
@@ -55,11 +38,12 @@
     cursor: pointer;
 
     &--active {
-      border: 1px solid #483eff;
+      border: 1px solid var(--purplish-blue);
+      background: #f8f9ff;
     }
 
     &:hover {
-      border: 1px solid #483eff;
+      border: 1px solid var(--purplish-blue);
     }
 
     @include on-desktop {
@@ -75,12 +59,12 @@
       display: flex;
       flex-direction: column;
       gap: 7px;
-      color: #022959;
+      color: var(--marin-blue);
       font-size: 16px;
       font-weight: 500;
 
       span {
-        color: #9699aa;
+        color: var(--cool-gray);
         font-size: 14px;
         font-weight: 400;
         line-height: 20px;
@@ -99,12 +83,12 @@
     background: #f8f9ff;
 
     &-text {
-      color: #9699aa;
+      color: var(--cool-gray);
       font-size: 14px;
       font-weight: 500;
 
       &--active {
-        color: #022959;
+        color: var(--marin-blue);
       }
     }
   }
@@ -114,7 +98,7 @@
   position: relative;
   width: 38px;
   height: 20px;
-  background-color: #022959;
+  background-color: var(--marin-blue);
   border-radius: 10px;
   cursor: pointer;
 

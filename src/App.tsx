@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import { AddOns } from "./components/AddOns";
 import { Container } from "./components/Container";
 import { FinishMessage } from "./components/FinishMessage";
@@ -9,12 +8,14 @@ import { Plan } from "./components/Plan";
 import { Steps } from "./components/Steps";
 import { Summary } from "./components/Summary";
 import { FormLayout } from "./components/FormLayout";
+import { useForm } from "./context/FormContext";
 
 export const App = () => {
   const [currentStep, setCurrentStep] = useState<number>(1);
+  const { validatePersonalInfo } = useForm();
 
   const handleNextStep = () => {
-    if (currentStep < 5) {
+    if (validatePersonalInfo() && currentStep < 5) {
       setCurrentStep(currentStep + 1);
     } else {
       return;
@@ -40,7 +41,7 @@ export const App = () => {
         {currentStep === 1 && <PersonalInfo />}
         {currentStep === 2 && <Plan />}
         {currentStep === 3 && <AddOns />}
-        {currentStep === 4 && <Summary />}
+        {currentStep === 4 && <Summary setCurrentStep={setCurrentStep} />}
         {currentStep === 5 && <FinishMessage />}
       </FormLayout>
       <Footer

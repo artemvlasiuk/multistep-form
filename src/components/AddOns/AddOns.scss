@@ -10,27 +10,11 @@
   }
 
   &__title {
-    color: #022959;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 9px;
-
-    @include on-desktop {
-      font-size: 32px;
-      margin-bottom: 11px;
-    }
+    @include form-title;
   }
 
   &__description {
-    color: #9699aa;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: 22px;
-
-    @include on-desktop {
-      margin-bottom: 35px;
-    }
+    @include form-description;
   }
 
   &__selector {
@@ -50,12 +34,16 @@
     width: 100%;
     height: 62px;
     border-radius: 8px;
-    border: 1px solid #d6d9e6;
+    border: 1px solid var(--light-gray);
     padding: 10px 16px;
     cursor: pointer;
 
     &:hover {
-      border: 1px solid #483eff;
+      border: 1px solid var(--purplish-blue);
+    }
+
+    &--active {
+      background: var(--alabaster);
     }
   }
 
@@ -69,14 +57,14 @@
   &__checkbox {
     width: 20px;
     height: 20px;
-    border: 1px solid #d6d9e6;
+    border: 1px solid var(--light-gray);
     border-radius: 4px;
     display: flex;
     justify-content: center;
     align-items: center;
 
     &--checked {
-      background-color: #483eff;
+      background-color: var(--purplish-blue);
       border: none;
     }
   }
@@ -86,12 +74,12 @@
     flex-direction: column;
     gap: 3px;
 
-    color: #022959;
+    color: var(--marin-blue);
     font-size: 14px;
     font-weight: 500;
 
     span {
-      color: #9699aa;
+      color: var(--cool-gray);
       font-size: 12px;
       font-weight: 400;
       line-height: 20px;
@@ -99,7 +87,7 @@
   }
 
   &__price {
-    color: #483eff;
+    color: var(--purplish-blue);
     font-size: 12px;
     font-weight: 400;
     line-height: 20px;

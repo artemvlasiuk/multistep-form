@@ -25,7 +25,7 @@
   font-weight: 500;
 
   &--primary {
-    background: #022959;
+    background: var(--marin-blue);
     color: #fff;
 
     &:hover {
@@ -35,7 +35,7 @@
 
   &--secondary {
     background: none;
-    color: #9699aa;
+    color: var(--cool-gray);
 
     &:hover {
       color: #022959;
@@ -48,10 +48,10 @@
   }
 
   &--confirm {
-    background-color: #483EFF;
+    background-color: var(--purplish-blue);
 
     &:hover {
-      background-color: #928CFF;
+      background-color: #928cff;
     }
   }
 }

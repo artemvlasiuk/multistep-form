@@ -12,6 +12,10 @@ export const Footer: React.FC<FooterProps> = ({
   handleNextStep,
   handleBackStep,
 }) => {
+  if (currentStep === 5) {
+    return null;
+  }
+
   return (
     <footer className="footer">
       <button

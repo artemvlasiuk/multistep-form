@@ -3,7 +3,11 @@ import { getAddOns } from "../../helpers/getAddOns";
 import { getPlanPrice } from "../../helpers/getPlanPrice";
 import "./Summary.scss";
 
-export const Summary = () => {
+interface SummaryProps {
+  setCurrentStep: (step: number) => void;
+}
+
+export const Summary: React.FC<SummaryProps> = ({ setCurrentStep }) => {
   const { formData } = useForm();
   const { plan, billing, addOns } = formData;
 
@@ -25,7 +29,7 @@ export const Summary = () => {
         <div className="summary__plan">
           <div className="summary__plan-name">
             {`${plan} (${billing})`}
-            <button className="summary__plan-change">Change</button>
+            <button className="summary__plan-change" onClick={() => setCurrentStep(2)}>Change</button>
           </div>
           <p className="summary__plan-price">{`$${planPrice}/${period}`}</p>
         </div>

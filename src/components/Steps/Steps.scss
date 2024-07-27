@@ -45,8 +45,8 @@
       flex-shrink: 0;
 
       &--active {
-        background-color: #bee2fd;
-        color: #022959;
+        background-color: var(--light-blue);
+        color: var(--marin-blue);
       }
     }
 
@@ -57,7 +57,7 @@
         display: flex;
         flex-direction: column;
         gap: 4px;
-        color: #abbcff;
+        color: var(--light-blue);
         font-size: 12px;
         font-weight: 400;
 

@@ -5,23 +5,11 @@
     width: 450px;
   }
   &__title {
-    color: #022959;
-    font-size: 24px;
-    font-weight: 700;
-    margin-bottom: 9px;
-
-    @include on-desktop {
-      font-size: 32px;
-      margin-bottom: 11px;
-    }
+    @include form-title;
   }
 
   &__description {
-    color: #9699aa;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 25px;
-    margin-bottom: 22px;
+    @include form-description;
   }
 
   &__info {
@@ -43,7 +31,7 @@
   &__divider {
     height: 1px;
     opacity: 0.2043;
-    background: #9699aa;
+    background: var(--cool-gray);
   }
 
   &__plan {
@@ -52,7 +40,7 @@
     align-items: center;
 
     &-name {
-      color: #022959;
+      color: var(--marin-blue);
       font-size: 14px;
       font-weight: 500;
       display: flex;
@@ -66,16 +54,20 @@
     }
 
     &-change {
-      color: #9699aa;
+      color: var(--cool-gray);
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
       text-decoration-line: underline;
       cursor: pointer;
+
+      &:hover {
+        color: var(--purplish-blue);
+      }
     }
 
     &-price {
-      color: #022959;
+      color: var(--marin-blue);
       font-size: 14px;
       font-weight: 700;
       line-height: 20px;
@@ -95,14 +87,14 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      color: #9699aa;
+      color: var(--cool-gray);
       font-size: 14px;
       font-weight: 400;
       line-height: 20px;
     }
 
     &-price {
-      color: #022959;
+      color: var(--marin-blue);
       font-family: Ubuntu;
       font-size: 14px;
       font-weight: 400;
@@ -114,7 +106,7 @@
     display: flex;
     justify-content: space-between;
     padding: 0 16px;
-    color: #9699aa;
+    color: var(--cool-gray);
     font-size: 14px;
     font-weight: 400;
     line-height: 20px;
@@ -124,7 +116,7 @@
     }
 
     &-price {
-      color: #483eff;
+      color: var(--purplish-blue);
       font-size: 20px;
       font-weight: 700;
       line-height: 20px;

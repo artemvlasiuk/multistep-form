@@ -3,3 +3,27 @@
     @content;
   }
 }
+
+@mixin form-title {
+  color: var(--marin-blue);
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 9px;
+
+  @include on-desktop {
+    font-size: 32px;
+    margin-bottom: 11px;
+  }
+}
+
+@mixin form-description {
+  color: var(--cool-gray);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 25px;
+  margin-bottom: 22px;
+
+  @include on-desktop {
+    margin-bottom: 35px;
+  }
+}

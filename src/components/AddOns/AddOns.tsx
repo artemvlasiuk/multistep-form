@@ -27,7 +27,11 @@ export const AddOns = () => {
         Add-ons help enhance your gaming experience.
       </p>
       <div className="add-ons__selector">
-        <div className="add-ons__select">
+        <div
+          className={cn("add-ons__select", {
+            "add-ons__select--active": onlineService,
+          })}
+        >
           <input
             type="checkbox"
             className="add-ons__input"
@@ -53,7 +57,11 @@ export const AddOns = () => {
           </label>
           <p className="add-ons__price">{`+$${1 * multiply}/${period}`}</p>
         </div>
-        <div className="add-ons__select">
+        <div
+          className={cn("add-ons__select", {
+            "add-ons__select--active": largerStorage,
+          })}
+        >
           <input
             type="checkbox"
             className="add-ons__input"
@@ -79,7 +87,11 @@ export const AddOns = () => {
           </label>
           <p className="add-ons__price">{`+$${2 * multiply}/${period}`}</p>
         </div>
-        <div className="add-ons__select">
+        <div
+          className={cn("add-ons__select", {
+            "add-ons__select--active": customizableProfile,
+          })}
+        >
           <input
             type="checkbox"
             className="add-ons__input"
